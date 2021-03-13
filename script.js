@@ -97,7 +97,7 @@ moreOptions.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', getMails)
 
 //Display results of a search
-searchButton.addEventListener('click', showMail)
+searchButton.addEventListener('click', filterMail)
 search.addEventListener('click', showMail)
 reset.addEventListener('click', resetSearch)
 
@@ -108,36 +108,15 @@ function getMails (){
         <div class="from">${item.from}</div>
         <div class="to">${item.to}</div>
         <div class="subject">${item.subject}</div>
-        <div class="date">${item.date}</div>
+        <div class="date time">${item.date}</div>
     </div>` 
         )
     //show number of mails
     mailCount.innerText = mails.length
 }
 
-function showMail (){
-
-    // let senderValue, receiverValue, mailSubjetValue, keywordValue, minDateValue, maxDateValue
-    // if(sender.value != ''){
-    //     senderValue = `from:${sender.value} `
-    // } else {senderValue = ''}
-    // if(receiver.value != ''){
-    //     receiverValue = `to:${receiver.value} `
-    // } else {receiverValue = ''}
-    // if(mailSubjet.value !=''){
-    //     mailSubjetValue = `subject:${mailSubjet.value} `
-    // } else {mailSubjetValue = ''}
-    // if(keyword.value !=''){
-    //     keywordValue = `${keyword.value} `
-    // } else {keywordValue = ''}
-    // if(minDate.value !=''){
-    //     minDateValue = `after:${minDate.value}`
-    // } else {minDateValue = ''}
-    // if(maxDate.value !=''){
-    //     maxDateValue = `before:${maxDate.value}`
-    // } else {maxDateValue = ''}
-    // searchBar.value = searchBar.value + senderValue + receiverValue + mailSubjetValue + keywordValue + minDateValue + maxDateValue
-
+function showMail (event){
+    event.preventDefault();
     searchBar.value = ''
     if(sender.value != ''){
         searchBar.value += `from:${sender.value} `
