@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(128, 128, 128, .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    min-height: 80vh;
+    background: #ffff;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-self: center;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    
+}
+.search{
+    width: 600px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.search .search-bar{
+    width: 500px;
+    height: 38px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.search .more-icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.search .fas{
+    font-size: 20px;
+    color: grey;
+}
+.search .search-btn{
+    width: 50px;
+    height: 40px;
+}
+.search .search-btn img{
+    width: 30px;
+    height: 30px;
+}
+.search-container{
+    width: 600px;
+    height: 300px;
+    border: 1px solid lightgrey;
+    background-color: #ffff;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 125px;
+    /* position: relative; */
+    z-index: 999;
+    position: fixed;
+}
+.show{
+    display: flex;
+}
+.search-box{
+    width: 550px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    
+}
+.search-box label{
+    width: 20%;
+    font-size: 16px;
+    font-weight: 600;
+    /* height: 40px; */
+}
+.search-box input{
+    width: 450px;
+    height: 40px;
+}
+
+.date-selector{
+    display: flex;
+    align-items: center;
+    width: 450px;
+    justify-content: space-between;
+}
+.date-picker .date-input{
+    padding-left: 40px;
+    width: 210px;
+    height: 40px;
+    font-size: 16px;
+    position: relative;
+}
+.date-picker .date-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-image: url('images/icon_calender.svg');
+    background-position: center;
+  }
+  .buttons{
+      width: 150px;
+      height: 50px;
+      align-self: flex-end;
+  }
+  .reset-button, .search-button{
+      width: 60px;
+      height: 30px;
+      font-size: 16px;
+     
+  }
+  .reset-button{
+    /* border: none; */
+  }
+.results{
+    display: flex;
+    margin-top: 20px;
+    border-bottom: solid 1px lightgrey;
+}
+.messages,
+.messages-array{
+    width: 100%;
+    max-width: 1000px;
+    height: 35px;
+    align-items: center;
+    border-bottom: solid 1px lightgrey;
+    display: flex;
+    justify-content: flex-start;
+}
+.messages{
+    /* border-top: solid 1px lightgrey; */
+    background-color: rgb(211, 211, 211, .3);
+}
+
+.from,
+.to,
+.date{
+    width: 20%
+}
+.subject{
+    width: 40%;
+}
+.messages-array{
+    cursor: pointer;
+}
+.messages-array:hover{
+    color: blue;
+}
+.display-messages{
+    display: flex;
+    flex-direction: column;
+}
+.empty-mail{
+    width: 100%;
+    max-width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #fff; */
+}
+.empty-mail img{
+    width: 150px;
+    height: 150px;
+}
+.hide {
+    display: none;
+}

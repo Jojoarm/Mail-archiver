@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HENNGE ADMISSION CHALLENGE</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class='search'>
+                <div class="more-icon"><i class="fas fa-chevron-down"></i></div>
+                <input type='text' class='search-bar' placeholder="Search by date, subject, keyword">
+                <button class='search-btn'><img src="images/icon_search.svg" alt="search icon"></button>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="from">From:</label>
+                    <input class='sender' type="text">
+                </div>
+                <div class="search-box">
+                    <label for="to">To:</label>
+                    <input class='recepient' type="text">
+                </div>
+                <div class="search-box">
+                    <label for="subject">Subject:</label>
+                    <input class='subject' type="text">
+                </div>
+                <div class="search-box">
+                    <label for="keyword">Keyword:</label>
+                    <input class='keyword' type="text">
+                </div>
+                <div class="search-box">
+                    <label for="date">Date:</label>
+                    <div class="date-selector">
+                        <div class='date-picker'>
+                            <input type="date" id='from-date' class="date-input">
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class='date-picker' >
+                            <input type="date" id='to-date' class="date-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class='reset-button'>Reset</button>
+                    <button class='search-button'>Search</button>
+                </div> 
+            </div>
+        </div>
+        <div class="results">
+            <p>Results: <span id='count'>0</span>mails</p>
+        </div>
+        <div class="messages">
+            <div class="from">From</div>
+            <div class="to">To</div>
+            <div class="subject">Subject</div>
+            <div class="date">Date</div>
+        </div>
+        <div class="display-messages">
+            
+        </div>
+    </div>
+    
+    <script src='script.js'></script>
+</body>
+</html>
